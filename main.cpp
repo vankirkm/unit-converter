@@ -71,12 +71,12 @@ int main() {
 
         try {
             convert_measurement(original_measurement, converted_measurement, adjacency_list, query);
+
+            cout << "Converted Measurement: " << converted_measurement << " " << query.to_unit
+                << " derived from " << original_measurement << " " << query.from_unit << endl;
         } catch (exception e) {
             cout << "Error: could not convert measurement" << endl;
         }
-
-        cout << "Converted Measurement: " << converted_measurement << " " << query.to_unit
-            << " derived from " << original_measurement << " " << query.from_unit << endl;
     }
 
     return 0;
